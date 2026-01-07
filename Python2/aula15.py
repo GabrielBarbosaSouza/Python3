@@ -102,7 +102,9 @@ def desafio69():
     print(f'Você cadastrou {maiorDeIdade} pessoas maiores de idade.')
     print(f'Você cadastrou {homens} homens.')
     print(f'Você cadastrou {mulheres} mulheres com menos de 20 anos.\n')
-        
+    
+    
+#A partir do desafio70 eu começei a escrever TUDO em inglês, com o principal objetivo sendo melhorar o meu inglês
 def desafio70():
     totalSum = 0
     productsOver1000 = 0
@@ -110,9 +112,9 @@ def desafio70():
     cheapestProduct = ''
     
     while True:
-        texto = 'PRODUCT REGISTRATION'
+        tittle = 'PRODUCT REGISTRATION'
         print('-'*30)
-        print(f'\033[33m{texto.center(30)}\033[0m')
+        print(f'\033[33m{tittle.center(30)}\033[0m')
         print('-'*30)
         
         productName = input('Enter the product name: ')
@@ -148,9 +150,9 @@ def desafio70():
     print(f'{cheapestProduct} is the cheapest product.')
 
 def desafio71():
-    texto = "BIEL'S BANK"
+    tittle = "BIEL'S BANK"
     print('='*30)
-    print(f'\033[32m{texto.center(30)}\033[m')
+    print(f'\033[32m{tittle.center(30)}\033[m')
     print('='*30)
     
     banknote50 = 0
