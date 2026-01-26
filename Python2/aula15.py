@@ -59,6 +59,8 @@ def desafio68():
             print('-'*30)
             print(f'\033[031mGAME OVER!!\033[0m Você venceu {contador} vezes.')
             break
+        
+desafio68()
 
 def desafio69():
     maiorDeIdade = 0
@@ -197,5 +199,4 @@ def desafio71():
             
     print('-'*30)
     print('Come back soon!\n')
-desafio71()
 
