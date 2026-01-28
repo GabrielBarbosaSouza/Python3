@@ -1,3 +1,5 @@
+import random
+
 def desafio72():
     numeros = (
     "zero", "um", "dois", "três", "quatro", "cinco",
@@ -49,4 +51,55 @@ def desafio73():
     print(f'O Mirassol está na posição {brasileirao.index("Mirassol") + 1}° da lista.')
 
 def desafio74():
+    numeros_aleatorios = ()
+
+    for i in range(5):
+        numero = random.randint(1, 10)
+        numeros_aleatorios += (numero, )
+
+    print(numeros_aleatorios)
+    print(f'O maior valor sorteado foi: {max(numeros_aleatorios)}')
+    print(f'O menor valor sorteado foi: {min(numeros_aleatorios)}')
+
+def desafio75():
+    valores = ()
+    contNove = 0
+    pares = 0
     
+    for _ in range(4):
+        valor = input('Digite um número de um algarismo: ')
+        valor = int(valor)
+        valores += (valor, )
+        
+        if valor == 9:
+            contNove += 1
+        
+        if valor % 2 == 0:
+            pares += 1
+            
+    
+    print(valores)
+    if 9 in valores:
+        print(f'O número 9 foi digitado {contNove} vezes.')
+    else:
+        print('O número 9 não foi digitado')
+    
+    if 3 in valores:
+        print(f'O primeiro número 3 está na {valores.index(3) + 1} posição')
+    else:
+        print('O número 3 não foi digitado')
+    print(f'Tiveram {pares} números pares')
+
+def desafio76():
+    listagem = (
+        'Lápis', 1.50,
+        'Caderno', 25.90,
+        'Borracha', 1,
+        'Apontador', 2
+    )
+    
+    print(listagem)
+    print('=-'*15)
+    print('LISTAGEM DE PREÇOS')
+    print('=-'*15)
+desafio76()
