@@ -94,12 +94,32 @@ def desafio76():
     listagem = (
         'Lápis', 1.50,
         'Caderno', 25.90,
-        'Borracha', 1,
-        'Apontador', 2
+        'Borracha', 1.00,
+        'Apontador', 2.00
     )
     
     print(listagem)
-    print('=-'*15)
+    print('-'*30)
     print('LISTAGEM DE PREÇOS')
-    print('=-'*15)
-desafio76()
+    print('-'*30)
+    
+def desafio77():
+    vogal = ('a', 'e', 'i', 'o', 'u')
+    palavras = (
+    "computador",
+    "janela",
+    "teclado",
+    "programacao",
+    "internet",
+    "python",
+    "caderno",
+    "musica",
+    "cidade",
+    "estudo"
+    )
+    
+    for _ in range(len(palavras)):
+        for vogal in palavras:
+            print(f'A palavra ... tem as vogais {_}')
+
+desafio77()
