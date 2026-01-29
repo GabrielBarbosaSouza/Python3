@@ -98,13 +98,17 @@ def desafio76():
         'Apontador', 2.00
     )
     
-    print(listagem)
-    print('-'*30)
-    print('LISTAGEM DE PREÇOS')
-    print('-'*30)
+    print('-'*37)
+    print(f'{"LISTAGEM DE PREÇOS":^37}')
+    print('-'*37)
     
+    for _ in range(len(listagem)):
+        if _ % 2 == 0:
+            print(f'{listagem[_]:.<30}', end= '')
+        else:
+            print(f'R${listagem[_]:.2f}')
+
 def desafio77():
-    vogal = ('a', 'e', 'i', 'o', 'u')
     palavras = (
     "computador",
     "janela",
@@ -118,8 +122,8 @@ def desafio77():
     "estudo"
     )
     
-    for _ in range(len(palavras)):
-        for vogal in palavras:
-            print(f'A palavra ... tem as vogais {_}')
-
-desafio77()
+    for p in palavras:
+        print(f'\nNa palavra {p} temos', end=' ')
+        for letra in p:
+            if letra.lower() in 'aeiou':
+                print(f'\033[32m{letra}\033[0m', end=' ')
