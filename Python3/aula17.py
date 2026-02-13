@@ -44,7 +44,66 @@ def desafio80():
             numero = int(numero)
             numeros.append(numero)
             c += 1
+            
+            for n in range(len(numeros)):
+                if numero >= numeros[n]:
+                    numeros.insert(n, numero)
+                else:
+                    break
         else:
             print('Digite um número correto')
-    print(f'A lista dos números de forma ordenada foram: {sorted(numeros)}')
-desafio80()
+    print(f'A lista dos números de forma ordenada foram: {numeros}')
+# desafio80():
+
+def desafio81():
+    continuar = ''
+    numeros = []
+
+    while continuar != 'n':
+        while True:
+            numero = input('Digite um número inteiro: ')
+            if numero.isnumeric():
+                numero = int(numero)
+                numeros.append(numero)
+                print('\nNúmero adicionado!')
+            else:
+                print('\nNúmero inválido')
+                
+            continuar = input('Deseja continuar? (S/N): ').lower()      
+            if continuar == 'n':
+                print('=-'*15)
+                print(f'Você digitou {len(numeros)} números')
+                print(f'Você digitou os números {sorted(numeros, reverse=True)}')
+                if 5 in numeros:
+                    print('Você digitou o número 5')
+                else:
+                    print('Você não digitou o número 5')
+            elif continuar == 's':
+                continue
+            else:
+                print('Digite apenas S ou N')
+                continuar = input('Deseja continuar? (S/N): ').lower()
+                
+def desafio82():
+    numeros = []
+    while True:
+        numero = input('Digite um número: ')
+        if numero.isnumeric():
+            numero = int(numero)
+            numeros.append(numero)
+        else:
+            print('Digite um número inteiro!')
+            
+        continuar = input('Deseja continuar? (S/N): ')
+        if continuar.lower() == 's':
+            continue
+        elif continuar.lower() == 'n':
+            break
+        else:
+            print('Digite "S" para sim e "N" para não')
+    print(numeros)
+            
+        # lista_pares
+        # lista_impares
+        
+desafio82()
