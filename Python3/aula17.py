@@ -1,3 +1,5 @@
+linha = '=-'*20
+
 def desafio78():    
     numeros = []
 
@@ -34,26 +36,7 @@ def desafio79():
             print('=-'*15)
             print(f'Você digitou os números {sorted(numeros)}')
 
-def desafio80():
-    numeros = []
-    c = 0
-    
-    while c != 5:
-        numero = input('Digite um número: ')
-        if numero.isnumeric():
-            numero = int(numero)
-            numeros.append(numero)
-            c += 1
-            
-            for n in range(len(numeros)):
-                if numero >= numeros[n]:
-                    numeros.insert(n, numero)
-                else:
-                    break
-        else:
-            print('Digite um número correto')
-    print(f'A lista dos números de forma ordenada foram: {numeros}')
-# desafio80():
+# def desafio80():
 
 def desafio81():
     continuar = ''
@@ -86,11 +69,18 @@ def desafio81():
                 
 def desafio82():
     numeros = []
+    impares = []
+    pares = []
+    
     while True:
         numero = input('Digite um número: ')
         if numero.isnumeric():
             numero = int(numero)
             numeros.append(numero)
+            if numero % 2 == 1:
+                impares.append(numero)
+            else:
+                pares.append(numero)
         else:
             print('Digite um número inteiro!')
             
@@ -101,9 +91,11 @@ def desafio82():
             break
         else:
             print('Digite "S" para sim e "N" para não')
-    print(numeros)
             
-        # lista_pares
-        # lista_impares
-        
-desafio82()
+    print(linha)
+    print(f'A lista de números digitados foi: {numeros}')
+    print(f'Dentro dos números digitados, os números impares são: {impares}')
+    print(f'Dentro dos números digitados, os números pares são: {pares}')
+
+def desafio83():
+    
