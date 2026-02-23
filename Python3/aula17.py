@@ -36,7 +36,25 @@ def desafio79():
             print('=-'*15)
             print(f'Você digitou os números {sorted(numeros)}')
 
-# def desafio80():
+def desafio80():
+    numeros = []
+    
+    for _ in range(5):
+        entrada = input('Digite um valor: ')
+        if not entrada.lstrip('-').isnumeric():
+            print('Digite um número inteiro!')
+        else:
+            numero = int(entrada)
+            
+        if len(numeros) == 0:
+            numeros.append(numero)
+            print(f'Número adicionado ao final da lista')
+        
+        for i in numeros:
+            
+                
+desafio80()
+
 
 def desafio81():
     continuar = ''
@@ -97,5 +115,4 @@ def desafio82():
     print(f'Dentro dos números digitados, os números impares são: {impares}')
     print(f'Dentro dos números digitados, os números pares são: {pares}')
 
-def desafio83():
-    
+# def desafio83():
