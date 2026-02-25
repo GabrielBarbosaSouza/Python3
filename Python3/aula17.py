@@ -40,21 +40,34 @@ def desafio80():
     numeros = []
     
     for _ in range(5):
-        entrada = input('Digite um valor: ')
-        if not entrada.lstrip('-').isnumeric():
-            print('Digite um número inteiro!')
-        else:
-            numero = int(entrada)
-            
+        
+        while True:
+            entrada = input('Digite um valor: ')
+            if entrada.lstrip('-').isnumeric():
+                numero = int(entrada)
+                break
+            else:
+                print('Digite um número inteiro!')
+                
         if len(numeros) == 0:
             numeros.append(numero)
-            print(f'Número adicionado ao final da lista')
-        
-        for i in numeros:
-            
-                
-desafio80()
+            print('Número adicionado ao final da lista...')
+        else:
+            inserido = False
 
+            for pos in range(len(numeros)):
+                if numero <= numeros[pos]:
+                    numeros.insert(pos, numero)
+                    print(f'Número adicionado na posição {pos} da lista...')
+                    inserido = True
+                    break
+            
+            if not inserido:
+                numeros.append(numero)
+                print('Número adicionado ao final da lista...')
+    print(linha)
+    print(f'Lista final (ordenada): {numeros}')
+desafio80()
 
 def desafio81():
     continuar = ''
@@ -72,7 +85,7 @@ def desafio81():
                 
             continuar = input('Deseja continuar? (S/N): ').lower()      
             if continuar == 'n':
-                print('=-'*15)
+                print(linha)
                 print(f'Você digitou {len(numeros)} números')
                 print(f'Você digitou os números {sorted(numeros, reverse=True)}')
                 if 5 in numeros:
