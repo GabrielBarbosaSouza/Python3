@@ -67,7 +67,6 @@ def desafio80():
                 print('Número adicionado ao final da lista...')
     print(linha)
     print(f'Lista final (ordenada): {numeros}')
-desafio80()
 
 def desafio81():
     continuar = ''
@@ -128,4 +127,20 @@ def desafio82():
     print(f'Dentro dos números digitados, os números impares são: {impares}')
     print(f'Dentro dos números digitados, os números pares são: {pares}')
 
-# def desafio83():
+def desafio83(): #muito dificil
+    expr = str(input('Digite uma expressão: '))
+    pilha = []
+    for simb in expr:
+        if simb == '(':
+            pilha.append(simb)
+        elif simb == ')':
+            if len(pilha) > 0:
+                pilha.pop()
+            else:
+                pilha.append(')')
+                break
+    if len(pilha) == 0:
+        print('Sua expressão está válida')
+    else:
+        print('Sua expressão está inválida')
+desafio83()
