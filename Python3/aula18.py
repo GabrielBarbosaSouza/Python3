@@ -1,3 +1,5 @@
+linha = '=-'*20
+
 def desafio84():
     pessoas = list()
 
@@ -29,3 +31,21 @@ def desafio84():
         if p[1] == leve:
             print(p[0])
             
+def desafio85():
+    numeros = [[], []]
+    
+    for _ in range(7):
+        num = int(input('Digite um número inteiro: '))
+        if num % 2 == 0:
+            numeros[0].append(num)
+            numeros[0].sort()
+        else:
+            numeros[1].append(num)
+            numeros[1].sort()
+
+    print(linha)
+    print(f'Você digitou {len(numeros[0])} números pares. São eles: {numeros[0]}')
+    print(f'Você digitou {len(numeros[1])} números pares. São eles: {numeros[1]}')
+
+def desafio86():
+    
