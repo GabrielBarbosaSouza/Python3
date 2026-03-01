@@ -1,3 +1,5 @@
+import time
+
 linha = '=-'*20
 
 def desafio84():
@@ -99,4 +101,14 @@ def desafio87():
     print(f'O maior valor da segunda linha é {max(linha2)}')
 
 def desafio88():
+    print(linha)
+    print('MEGA SENA'.center(len(linha)))
+    print(linha)
     
+    jogos = input('Quantos jogos você quer sortear?: ')
+    
+    for jogo in range(int(jogos)):
+        print('teste')
+        time.sleep(1)
+        
+desafio88()
