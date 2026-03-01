@@ -72,19 +72,21 @@ def desafio87():
     ]
     
     par = list()
-    # coluna3 = list()
+    coluna3 = list()
     linha2 = list()
     
     for l in range(3): 
         for c in range(3):
-            matriz[l][c] = input(f'Digite um valor para [{l}, {c}]: ')
+            matriz[l][c] = int(input(f'Digite um valor para [{l}, {c}]: '))
                
-            if int(matriz[l][c]) % 2 == 0:
-                par.append(int(matriz[l][c]))
-              
+            if (matriz[l][c]) % 2 == 0:
+                par.append(matriz[l][c])
+            
+            if c == 2:
+                coluna3.append(matriz[l][c])
+            
         if l == 1:
-            for c in range(3):
-                linha2.append(int(matriz[l][c]))  
+            linha2.append(matriz[l][c])
             
     print(linha)   
     for l in range(3):
@@ -93,8 +95,8 @@ def desafio87():
         print()
           
     print(f'\nA soma de todos os números pares dessa matriz é {sum(par)}')
-    
+    print(f'A soma dos valores da terceira coluna é de {sum(coluna3)}')
     print(f'O maior valor da segunda linha é {max(linha2)}')
-desafio87()
-    
+
+def desafio88():
     
