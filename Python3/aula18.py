@@ -45,7 +45,24 @@ def desafio85():
 
     print(linha)
     print(f'Você digitou {len(numeros[0])} números pares. São eles: {numeros[0]}')
-    print(f'Você digitou {len(numeros[1])} números pares. São eles: {numeros[1]}')
+    print(f'Você digitou {len(numeros[1])} números impares. São eles: {numeros[1]}')
 
 def desafio86():
+    matriz = [
+        [[], [], []], 
+        [[], [], []],
+        [[], [], []],
+    ]
+    
+    for l in range(3):
+        for c in range(3):
+            matriz[l][c] = input(f'Digite um valor para [{l}, {c}]: ')
+     
+    print(linha)   
+    for l in range(3):
+        for c in range(3):
+            print(f'[{matriz[l][c]:^5}]', end='')
+        print()
+desafio86()
+    
     
