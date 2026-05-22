@@ -1,3 +1,5 @@
+# geral
+
 import random
 
 #desafio 66 é o mesmo do desafio 64

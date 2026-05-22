@@ -1,3 +1,5 @@
+# If Else Elif
+
 def teste():
     n = input("Digite um número inteiro de 0 a 9999: ")
     n = int(n)

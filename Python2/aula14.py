@@ -1,3 +1,5 @@
+# While
+
 import random
 from InquirerPy import prompt
 import math
