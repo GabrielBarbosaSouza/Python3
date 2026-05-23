@@ -14,23 +14,27 @@ def desafio90():
         print(f"{aluno["nome"]} foi reprovado com uma média de {aluno["media"]}!")
 
 from random import randint
+from operator import itemgetter
+from time import sleep
 def desafio91():
-    jogadores = [
-    {"jogador": "jogador1", "dado": 0},
-    {"jogador": "jogador2", "dado": 0},
-    {"jogador": "jogador3", "dado": 0},
-    {"jogador": "jogador4", "dado": 0}
-]
+    jogadores = {
+        "Jogador 01": randint(1,6),
+        "Jogador 02": randint(1,6),
+        "Jogador 03": randint(1,6),
+        "Jogador 04": randint(1,6)
+}
 
     print("Valores sorteados:")
-
-    for d in range(4):
-        jogadores[d]["dado"] = randint(1,6)
-        print(F"O {jogadores[d]["jogador"]} tirou {jogadores[d]["dado"]}")
-
-    print('Os jogadores com maiores valores tirados foram:')
+    for k, v in jogadores.items():
+        print(f"O {k} tirou o número {v}!")
+        
+    print()
     
-    print(jogadores)
-    print(jogadores[1]["dado"])
+    print('Os jogadores com maiores valores tirados foram:')
+    cont = 1
+    for k, v in sorted(jogadores.items(), key=itemgetter(1)):
+        sleep(1)
+        print(f"{cont}° Lugar: {k} com o dado valendo {v}")
+        cont += 1
     
 desafio91()
