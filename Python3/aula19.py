@@ -1,6 +1,7 @@
 # Dict
 
 def desafio90():
+    print()
     aluno = dict()
 
     aluno["nome"] = str(input("Digite o nome do aluno: "))
@@ -17,6 +18,7 @@ from random import randint
 from operator import itemgetter
 from time import sleep
 def desafio91():
+    print()
     jogadores = {
         "Jogador 01": randint(1,6),
         "Jogador 02": randint(1,6),
@@ -37,4 +39,27 @@ def desafio91():
         print(f"{cont}° Lugar: {k} com o dado valendo {v}")
         cont += 1
     
-desafio91()
+def desafio92():
+    print()
+    from datetime import datetime
+    dados = dict()
+    
+    dados["Nome"] = str(input("Nome: "))
+    idade = int(input("Ano de Nascimento: "))
+    dados["Idade"] = datetime.now().year - idade
+    
+    dados["Número da Carteira de trabalho"] = int(input("Carteira de Trabalho (0 não tem): "))
+    if dados["Número da Carteira de trabalho"] != 0:
+        dados["Ano de Contratação"] = int(input("Ano de Contratação: "))
+        salario = float(input("Salário: R$"))
+        dados["Salario"] = f"{salario:.2f}"
+        dados["Aposentadoria"] = dados["Ano de Contratação"] + 35
+    else:
+        del dados["Número da Carteira de trabalho"]
+
+    print("=-"*20)
+    for k, v in dados.items():
+        print(f"- {k}: {v}")
+    
+desafio92()
+    
