@@ -97,6 +97,3 @@ def desafio99():
     maior(2, 3)
     maior(1, 2, 5)
     maior(0)
-
-
-        
