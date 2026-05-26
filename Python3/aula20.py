@@ -88,4 +88,15 @@ def desafio98():
         print("Fim.")
     contador(10, 1, 1)
 
-desafio98()
+def desafio99():
+    def maior(* valor):
+        escreva("Analisando os valores passados...")
+        print(f"Valores: {valor} | Ao todo foram analisados {len(valor)} valores. ")
+        print(f"O maior valor é {max(valor)}")
+        
+    maior(2, 3)
+    maior(1, 2, 5)
+    maior(0)
+
+
+        
