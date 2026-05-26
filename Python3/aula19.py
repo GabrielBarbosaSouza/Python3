@@ -61,5 +61,140 @@ def desafio92():
     for k, v in dados.items():
         print(f"- {k}: {v}")
     
-desafio92()
+def escreva(texto):
+    tamanho = len(texto)
+    print("-" * tamanho)
+    print(texto.center(tamanho))
+    print("-" * tamanho)
     
+
+def desafio93():
+    print()
+
+    dados = dict()
+
+    dados["Nome"] = input("Nome do jogador: ")
+    partidas = int(input(f"Quantas partidas {dados["Nome"]} Jogou? "))
+
+    if partidas != 0:
+        dados["Total de Gols"] = 0
+        gols_total = list()
+        for i in range(partidas):
+            gols = int(input(f"Quantos gols na partida {i+1}? "))
+            gols_total.append(gols)
+            dados["Total de Gols"] += gols
+    else:
+        print("Erro! Digite um jogador com mais de 0 partidas!.")
+
+    dados["Gols"] = gols_total
+
+    print("=-"*20)
+    print(dados)
+    print("=-"*20)
+
+
+    print("=-"*20)
+    for k, v in dados.items():
+        print(f"{k}: {v}")
+    print("=-"*20)
+
+    print("=-"*20)
+    print(f"O jogador {dados["Nome"]} jogou {partidas} partidas:")
+    for i in range(partidas):
+        print(f"     - Na partida {i+1} o jogador fez {dados["Gols"][i]} gols")
+    
+    print(f"Foi um total de {dados["Total de Gols"]} gols!")
+
+def desafio94():
+    pessoa = dict()
+    pessoas = list()
+    
+    while True:
+        print()
+        pessoa.clear()
+        pessoa["Nome"] = input("Nome: ")
+
+        pessoa["Genero"] = input("Gênero (M/F): ").upper()
+        if pessoa["Genero"] != "M" and pessoa["Genero"] != "F":
+            print("Digite apenas M ou F.")
+            pessoa["Genero"] = input("Gênero (M/F): ").upper()
+
+        pessoa["Idade"] = int(input("Idade: "))
+
+        pessoas.append(pessoa.copy())
+
+        continuar = input("Quer continuar? (S/N): ").lower()
+        if continuar != "s" and continuar != "n":
+            print("Digite apenas S ou N.")
+            continuar = input("Quer continuar? (S/N): ").lower()
+        elif continuar == "s":
+            continue
+        else:
+            break
+
+    print("=-"*20)
+    print(pessoas)
+    print("=-"*20)
+    
+    print(f"A) Ao todo temos {len(pessoas)} pessoas cadastradas")
+    
+    media = list()
+    for p in range(len(pessoas)):
+        media.append(pessoas[p]["Idade"])
+    media = sum(media) / len(media)
+    print(f"B) A média de idade é de {media} anos")
+
+    mulheres = list()
+    for p in range(len(pessoas)):
+        if pessoas[p]["Genero"] == "F":
+            mulheres.append(pessoas[p]["Genero"])
+        else:
+            continue
+    print(f"C) As mulheres cadastradas foram {len(mulheres)}")
+
+    acima_idade = list()
+    for p in range(len(pessoas)):
+        if pessoas[p]["Idade"] > media:
+            acima_idade.append(pessoas[p]["Nome"])
+    print(f"D) Lista de pessoas que estão acima da média de idade:")
+    print(acima_idade)
+
+def desafio95():
+    jogador = dict()
+    jogadores = list()
+
+    while True:
+        print()
+        jogador.clear()
+        jogador["Nome"] = input("Nome do jogador: ")
+        partidas = int(input(f"Quantas partidas {jogador["Nome"]} Jogou? "))
+
+        if partidas != 0:
+            jogador["Total de Gols"] = 0
+            gols_total = list()
+            
+            for i in range(partidas):
+                gols = int(input(f" Quantos gols na partida {i+1}? "))
+                gols_total.append(gols)
+                jogador["Total de Gols"] += gols
+                       
+        else:
+            print("Erro! Digite um jogador com mais de 0 partidas!.")
+            partidas = int(input(f"Quantas partidas {jogador["Nome"]} Jogou? "))
+    
+        jogador["Gols"] = gols_total
+        jogadores.append(jogador.copy())
+                
+        continuar = input("Quer continuar? (S/N): ").lower()
+        if continuar != "s" and continuar != "n":
+            print("Digite apenas S ou N.")
+            continuar = input("Quer continuar? (S/N): ").lower()
+            
+        elif continuar == "s":
+            continue
+        
+        else:
+            break
+        
+    print("=-"*20)
+    print(jogadores)
