@@ -1,8 +1,8 @@
 def escreva(texto):
     tamanho = len(texto)
-    print("~"*tamanho)
+    print("~" * tamanho)
     print(texto.center(tamanho))
-    print("~"*tamanho)
+    print("~" * tamanho)
     
 
 def desafio96():
@@ -13,17 +13,17 @@ def desafio96():
     # print("CONTROLE DE TERRENOS")
     # print("=-"*20)
     
-    # largura = float(input("Largura (m): "))
-    # comprimento = float(input("Comprimento (m): "))
+    # base = float(input("Largura (m): "))
+    # altura = float(input("Comprimento (m): "))
     
-    # area(largura, comprimento)
+    # area(base, altura)
 
 def desafio97():
     def escreva(texto):
         tamanho = len(texto)
-        print("-" * tamanho)
+        print("~" * tamanho)
         print(texto.center(tamanho))
-        print("-" * tamanho)
+        print("~" * tamanho)
         
     escreva("Olá, mundo!")
 
@@ -97,3 +97,25 @@ def desafio99():
     maior(2, 3)
     maior(1, 2, 5)
     maior(0)
+
+import random
+import time
+def desafio100():
+    def sortear(lista):
+        print("Sorteando 5 valores: ", end="")
+        for n in range(5):
+            n = random.randint(1, 10)
+            lista.append(n)
+            print(n, end=" ", flush=True)
+            time.sleep(0.3)
+            
+    def somaPar(lista):
+        listaPar = list()
+        for n in lista:
+            if n % 2 == 0:
+                listaPar.append(n)
+        print(f"\nSomando os números pares entre {lista} obtemos {sum(listaPar)}")
+    
+    numeros = list()
+    sortear(numeros)
+    somaPar(numeros)
