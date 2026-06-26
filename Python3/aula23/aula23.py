@@ -1,3 +1,9 @@
+import urllib.request
+from lib.interface import *
+from lib.opcoes import *
+
+# Importar * significa importar tudo q a pasta tem
+
 def desafio113():
     def leiaInt(num):
         while True:
@@ -22,13 +28,49 @@ def desafio113():
 
     print(f'Você digitou {i} e {f}')
 
-
-import urllib.request
-
 def desafio114():
     try:
-        site = urllib.request.urlopen('https://ong-eg.github.io/SmartEco/')
+        urllib.request.urlopen('https://ong-eg.github.io/SmartEco/')
     except Exception as e:
         print(f'Não consegui acessar esse site!\nErro: {e}')
     else:
         print('Consegui acessar esse site!')
+        
+def desafio115():
+    
+    lista = ["Ver pessoas cadastradas", "Cadastrar novas pessoas", "Sair do sistema"]
+       
+    while True:
+        menu(lista)
+        print("-"*40)
+        
+        try:
+            opcao = int(input("\033[4:mSua opção:\033[m "))
+            
+            if opcao == 1:
+                pessoascadastradas("aula23/lib/opcoes/pessoascadastradas.txt")
+            
+            elif opcao == 2:
+                cadastrarpessoas("aula23/lib/opcoes/pessoascadastradas.txt")
+            
+            elif opcao == 3:
+                cabecalho(lista[2])
+                print("Volte sempre!")
+                break
+                
+            else:
+                print("\033[31mOpção inválida! Tente novamente.\033[m")
+                
+            repetir = input("Deseja voltar ao menu? (S/N): ").lower()
+            if repetir == "s":
+                print()
+                continue
+            elif repetir == "n":
+                break
+            else:
+                print("\033[31mEscolha uma opção válida.\033[m")
+            
+        except Exception as e:
+            print(f"\033[31mERRO: {e}.\033[m")
+                
+desafio115()
