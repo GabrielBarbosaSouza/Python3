@@ -1,0 +1,30 @@
+# Declaração de uma CLASSE
+class Gafanhoto:
+    # Método Construtor
+    def __init__(self):
+        # Atributos de Instância
+        self.nome = ''
+        self.idade = 0
+        
+    # Métodos de Instância
+    def aniverario(self):
+        self.idade += 1
+        
+    def mensagem(self):
+        return f"{self.nome} é Gafanhoto e tem {self.idade} anos de idade."
+    
+# Declaração de um OBJETO
+g1 = Gafanhoto()
+g1.nome = "Gabriel"
+g1.idade = 18
+g1.aniverario()
+print(g1.mensagem())
+
+g2 = Gafanhoto()
+g2.nome = "Nicole"
+g2.idade = 18
+g2.aniverario()
+print(g2.mensagem())
+
+g3 = Gafanhoto()
+print(g3.mensagem())
