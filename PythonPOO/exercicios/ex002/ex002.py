@@ -1,10 +1,10 @@
 # Declaração de uma CLASSE
 class Pessoa:
     """
-    Classe que le um nome e idade de uma pessoa e retorna essas informações.
-    
-    Para ver uma nova pessoa use a estrutura:
-    variavel = Pessoa(nome, idade)
+Classe que le um nome e idade de uma pessoa e retorna essas informações.
+
+Para ver uma nova pessoa use a estrutura:
+variavel = Pessoa(nome, idade)
     """
     # Método Construtor
     def __init__(self, nome='vazio', idade=0):
