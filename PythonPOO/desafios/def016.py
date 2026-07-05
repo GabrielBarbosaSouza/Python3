@@ -1,6 +1,13 @@
 from rich import print
 
 class Funcionario:
+    """
+Uma classe que lê funcionários e os apresenta com base no nome, setor e cargo da pessoa.
+
+Para usar use:
+variavel = Funcionario(nome, setor, cargo)
+    """
+    
     def __init__(self, nome, setor, cargo):
         self.nome = nome
         self.setor = setor
