@@ -24,7 +24,7 @@ varivel.analisar()
     def analisar(self):
         carnePorPessoa = 0.4
         carneTotal = carnePorPessoa * self.quantidade
-        custoTotal = carneTotal * 82.4
+        custoTotal = carneTotal * 40
         custoPorPessoa = custoTotal / self.quantidade
         
         texto =f"""Analisando [yellow]{self.titulo}[/]  com [red]{self.quantidade} convidados[/]:
@@ -37,7 +37,7 @@ Cada pessoa pagará [bold]R${custoPorPessoa:.2f}[/] para participar do churras""
         print(Panel(texto, title = self.titulo))
         
         
-c1 = Churrasco("Churrasco dos irmão", 15)
+c1 = Churrasco("Churrasco dos irmão", 11)
 c1.analisar()
 
 c2 = Churrasco("Churrasco dos Cria", 100)
