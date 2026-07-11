@@ -6,6 +6,23 @@ install()
 
 
 class ControleRemoto:
+    """
+Uma classe que simula o Controle Remoto de uma televisão.
+Opções disponíveis: @ para ligar a TV, < para voltar o canal, > para avançar o canal, + para aumentar o volume, - para diminuir o volume e 0 para sair do programa.
+
+Para usar qualquer uma das opções, use a váriavel:
+variavel = ControleRemoto()
+while True:
+    variavel.mostrar_tv()
+    escolha = input(f"< CH{variavel.canal_atual} >     - VOL{variavel.volume_atual} +     : ")
+    if escolha == "0":
+        print("[bold green]Volte sempre![/] 🤖")
+        break
+
+    variavel.processar_comando(escolha)
+    """
+    
+    
     canal_min = 1
     canal_max = 5
 
