@@ -1,7 +1,7 @@
 class Mensagem:
     def __init__(
         self,
-        mensagem,
+        mensagem: str,
         tipo,
         icone
     ):
