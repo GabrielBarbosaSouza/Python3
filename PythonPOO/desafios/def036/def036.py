@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import locale
 
 class Pagamento(ABC):
-    def __init__(self,):
+    def __init__(self):
         self._valor = None    
     
     
